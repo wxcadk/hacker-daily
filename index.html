@@ -55,11 +55,68 @@ footer a{color:#98c379}
 </div>
 
 <div id="entries">
-<div class="empty-state">
-<p class="terminal-line">正在初始化安全日报系统...</p>
-<p class="terminal-line">等待首次数据采集 (每日 04:00 CST)</p>
-<p class="terminal-line">首条日报将于明日 07:30 推送</p>
-</div>
+<div class="day-card">
+      <div class="day-header">
+        <div class="day-date">📅 2026年6月3日（周三）</div>
+        <div class="day-count">今天 8 条</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">PHP Type Juggling 认证绕过 <span style="font-size:0.8em">⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag low">入门</span>
+        </div>
+        <div class="entry-desc">PHP 在比较字符串和数字时偶尔会&quot;犯糊涂&quot;，攻击者利用这个漏洞无需密码就能登录。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">命令注入：Cacti 监控系统利用 <span style="font-size:0.8em">⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag low">入门</span>
+        </div>
+        <div class="entry-desc">当应用把用户输入拼进系统命令里执行时，攻击者可以塞入额外的命令来控制服务器。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">WinRAR 路径穿越 + 真实 APT 攻击 <span style="font-size:0.8em">⭐⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag medium">基础</span>
+        </div>
+        <div class="entry-desc">WinRAR 解压文件时可以被诱骗把文件放到不该放的地方，俄罗斯黑客组织 Gamaredon 就在用这招攻击乌克兰目标。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">Java 反序列化攻击 <span style="font-size:0.8em">⭐⭐⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag high">进阶</span>
+        </div>
+        <div class="entry-desc">Java 程序在&quot;解冻&quot;数据对象时可以被诱骗执行恶意代码——就像你解冻一块肉，结果肉里藏了个炸弹。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">HTTP 请求走私 (Request Smuggling) <span style="font-size:0.8em">⭐⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag medium">基础</span>
+        </div>
+        <div class="entry-desc">当前端代理和后端服务器对 HTTP 请求长度的理解不一致时，攻击者的请求可以被&quot;藏&quot;进另一个正常请求里，偷渡到后端。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">Flask SSTI 模板注入提权 <span style="font-size:0.8em">⭐⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag medium">基础</span>
+        </div>
+        <div class="entry-desc">当用户输入被放进网页模板里渲染时，攻击者可以注入 Jinja2 模板代码来执行系统命令。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">Docker 容器逃逸（WSL2 后端） <span style="font-size:0.8em">⭐⭐⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag high">进阶</span>
+        </div>
+        <div class="entry-desc">在 Docker 容器里拿到 root 权限后，如果宿主机用 WSL2 跑 Docker，攻击者可以利用 WSL2 特有的通信机制逃出来控制宿主机。</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">GitHub CI/CD 供应链攻击 <span style="font-size:0.8em">⭐⭐</span></div>
+        <div class="entry-meta">
+          <span class="tag medium">基础</span>
+        </div>
+        <div class="entry-desc">攻击者在公开仓库里藏恶意 GitHub Actions 配置，当其他开发者不小心复用了这些 Actions 时，后门就悄悄溜进了他们的项目。</div>
+      </div>
+    </div>
 </div>
 
 <footer>
@@ -69,9 +126,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '0';
-document.getElementById('totalEntries').textContent = '0';
-document.getElementById('lastUpdate').textContent = '--';
+document.getElementById('totalDays').textContent = '1';
+document.getElementById('totalEntries').textContent = '8';
+document.getElementById('lastUpdate').textContent = '2026-06-03';
 </script>
 </body>
 </html>
