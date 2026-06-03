@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>🏴‍☠️ Hacker Daily — 黑客技术日报</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e14;color:#bfc7d5;font-family:"SF Mono","Fira Code","Cascadia Code",Consolas,monospace;min-height:100vh;line-height:1.7}
+.container{max-width:900px;margin:0 auto;padding:40px 20px}
+.hero{text-align:center;padding:60px 20px 40px;border-bottom:1px solid #1a1f2b;margin-bottom:40px}
+.hero h1{font-size:2.6em;color:#ff6b6b;margin-bottom:8px;letter-spacing:2px}
+.hero .tagline{color:#5c6370;font-size:0.95em}
+.hero .glitch{display:inline-block;animation:glitch 3s infinite}
+@keyframes glitch{0%,100%{opacity:1}50%{opacity:0.7}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:32px}
+.stat-card{background:#12171f;border:1px solid #1e2330;border-radius:8px;padding:16px;text-align:center}
+.stat-val{font-size:1.6em;font-weight:700;color:#ff6b6b}
+.stat-label{color:#5c6370;font-size:0.78em;margin-top:4px}
+.day-card{background:#12171f;border:1px solid #1e2330;border-left:3px solid #ff6b6b;border-radius:0 8px 8px 0;padding:20px;margin-bottom:16px;transition:border-color 0.3s}
+.day-card:hover{border-left-color:#ffd93d}
+.day-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #1a1f2b}
+.day-date{color:#ffd93d;font-size:1.1em;font-weight:700}
+.day-count{color:#5c6370;font-size:0.8em}
+.entry{margin-bottom:14px;padding:10px 0;border-bottom:1px dashed #1a1f2b}
+.entry:last-child{border-bottom:none;margin-bottom:0}
+.entry-title{color:#e5c07b;font-size:0.95em;margin-bottom:4px}
+.entry-title a{color:#e5c07b;text-decoration:none}
+.entry-title a:hover{color:#ffd93d;text-decoration:underline}
+.entry-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.tag{background:#1e2330;color:#98c379;padding:2px 8px;border-radius:10px;font-size:0.72em}
+.tag.high{background:#ff6b6b22;color:#ff6b6b}
+.tag.medium{background:#ffd93d22;color:#ffd93d}
+.tag.low{background:#98c37922;color:#98c379}
+.entry-desc{font-size:0.85em;color:#8b949e;line-height:1.55}
+.empty-state{text-align:center;padding:60px;color:#5c6370}
+.terminal-line{color:#5c6370;font-size:0.85em;margin-bottom:4px}
+.terminal-line::before{content:"> ";color:#ff6b6b}
+footer{text-align:center;color:#5c6370;font-size:0.75em;padding:30px;border-top:1px solid #1a1f2b;margin-top:20px}
+footer a{color:#98c379}
+@media(max-width:600px){.hero h1{font-size:1.6em}.hero{padding:30px 10px}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="hero">
+<h1><span class="glitch">🏴‍☠️</span> Hacker Daily</h1>
+<p class="tagline">黑客技术日报 · 初学者友好 · 攻击者视角 · 每日更新</p>
+</div>
+
+<div class="stats">
+<div class="stat-card"><div class="stat-val" id="totalDays">0</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">0</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">--</div><div class="stat-label">最新更新</div></div>
+</div>
+
+<div id="entries">
+<div class="empty-state">
+<p class="terminal-line">正在初始化安全日报系统...</p>
+<p class="terminal-line">等待首次数据采集 (每日 04:00 CST)</p>
+<p class="terminal-line">首条日报将于明日 07:30 推送</p>
+</div>
+</div>
+
+<footer>
+<p>wxcadk.github.io/hacker-daily — 攻击者视角 · 防御者思维 — powered by <a href="https://github.com/nousresearch/hermes-agent">Hermes Agent</a></p>
+</footer>
+</div>
+
+<script>
+// Stats will be updated by the cron job
+document.getElementById('totalDays').textContent = '0';
+document.getElementById('totalEntries').textContent = '0';
+document.getElementById('lastUpdate').textContent = '--';
+</script>
+</body>
+</html>
