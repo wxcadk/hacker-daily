@@ -49,12 +49,98 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">0</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">0</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">--</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">3</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">26</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-07</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月7日 周日</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">SQL 注入：从登录绕过到数据窃取 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">SQL注入</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">OWASP</span>
+      </div>
+      <div class="entry-desc">把恶意指令藏在用户输入里，让数据库执行攻击者的命令。用 ' OR '1'='1 绕过登录，用 UNION SELECT 窃取数据。<b>攻击者视角：</b>登录框打个单引号报错就说明有戏，盲注可以逐字符猜出整个数据库。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">跨站脚本攻击（XSS）：注入 JavaScript 劫持会话 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">XSS</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">前端攻击</span>
+      </div>
+      <div class="entry-desc">在网页中注入恶意 JavaScript，让别人的浏览器执行你的代码。反射型藏在 URL 里，存储型存入数据库永久生效。<b>攻击者视角：</b>用 document.cookie 偷走登录凭证，或显示假登录框骗取密码。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">社会工程学：Scattered Spider 电话攻击案例 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">Vishing</span>
+        <span class="tag">社工攻击</span>
+      </div>
+      <div class="entry-desc">不黑系统黑人心——冒充员工打电话给 IT 帮助台，利用紧迫感让客服跳过验证流程重置密码。SIM Swapping 劫持短信验证码。<b>攻击者视角：</b>LinkedIn 上收集信息，一个电话搞定 MFA。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">QR 码钓鱼（Quishing）：二维码绕过邮件安全 <span style="font-size:0.75em">⭐ 入门</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">钓鱼攻击</span>
+        <span class="tag">QR码</span>
+        <span class="tag">凭证窃取</span>
+      </div>
+      <div class="entry-desc">邮件里放二维码，安全扫描器看不懂图片但手机会扫。搭假网站编码成二维码嵌入 PDF，扫码即中招。<b>攻击者视角：</b>邮件安全网关扫描不了图片里的链接，Quishing 完美绕过传统防御。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Linux 提权：从普通用户到 root <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">提权</span>
+        <span class="tag">Linux</span>
+        <span class="tag">SUID</span>
+      </div>
+      <div class="entry-desc">拿到普通用户 shell 只是开始，找 SUID 文件、劫持 crontab、利用内核漏洞（DirtyPipe/DirtyCow）才能到 root。<b>攻击者视角：</b>find / -perm -4000 找 SUID 文件，sudo -l 看能用什么提权。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">密码破解：Hashcat 字典+规则攻击 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">密码破解</span>
+        <span class="tag">Hashcat</span>
+        <span class="tag">认证攻击</span>
+      </div>
+      <div class="entry-desc">拿到密码哈希后用 rockyou.txt 字典先跑一遍覆盖弱密码，再加规则变换（大小写、加数字、替换字母）暴力运原。<b>攻击者视角：</b>加了 Salt 的哈希无法用彩虹表，只能逐个计算。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Nmap 网络侦察：端口扫描与服务识别 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag low">LOW</span>
+        <span class="tag">信息收集</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">侦察</span>
+      </div>
+      <div class="entry-desc">攻击前先摸清目标：哪些端口开着、跑什么服务、什么系统。用 NSE 脚本自动检测已知漏洞。<b>攻击者视角：</b>nmap -sV -sC -p- 扫描所有端口识别服务版本，--script vuln 自动检测漏洞。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">恶意广告（Malvertising）：Atomic Stealer macOS 案例 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">恶意广告</span>
+        <span class="tag">macOS</span>
+        <span class="tag">窃取器</span>
+      </div>
+      <div class="entry-desc">Google 搜索广告投放伪装下载页，把 Atomic Stealer 窃取程序伪装成正常软件。Mac 也中招，浏览器密码和钱包全被偷。<b>攻击者视角：</b>SEO 投毒+恶意广告，搜索结果顶部就是陷阱。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月6日 周六</div>
@@ -255,9 +341,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '2';
-document.getElementById('totalEntries').textContent = '18';
-document.getElementById('lastUpdate').textContent = '2026-06-06';
+document.getElementById('totalDays').textContent = '3';
+document.getElementById('totalEntries').textContent = '26';
+document.getElementById('lastUpdate').textContent = '2026-06-07';
 </script>
 </body>
 </html>
