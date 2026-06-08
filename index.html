@@ -49,12 +49,88 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">4</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">34</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-08</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">5</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">41</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-09</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">2026年6月9日 周二</div>
+      <div class="day-count">今天 7 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Samba 打印命令注入（CVE-2026-4480，CVSS 10.0） <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">命令注入</span>
+        <span class="tag">Samba</span>
+        <span class="tag">远程执行</span>
+      </div>
+      <div class="entry-desc">Linux 打印服务满分漏洞，攻击者无需密码即可远程执行命令。通过 SMB 协议连接打印机接口，提交含管道符的打印任务名触发命令注入。练习：HackTheBox "Abducted" 靶机。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">VPN 认证绕过 — Check Point（CVE-2026-50751） <span style="font-size:0.75em">⭐⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">认证绕过</span>
+        <span class="tag">VPN</span>
+        <span class="tag">内网渗透</span>
+      </div>
+      <div class="entry-desc">Check Point VPN 的 IKEv1 协议存在认证逻辑缺陷，攻击者可跳过身份验证建立 VPN 隧道进入企业内网。勒索团伙 Qilin 已在实战中利用此漏洞。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">AI 自动挖掘 FFmpeg 21 个零日漏洞 <span style="font-size:0.75em">⭐⭐⭐⭐⭐ 前沿</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">零日漏洞</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">内存安全</span>
+      </div>
+      <div class="entry-desc">AI 代理花 1000 美元扫描 FFmpeg 150 万行代码，发现隐藏 15-20 年的堆溢出/栈溢出漏洞。恶意视频可在播放时触发漏洞。练习：TryHackMe "Buffer Overflow Prep" 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">语音钓鱼 + 物理入侵（UNC3753） <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">勒索</span>
+      </div>
+      <div class="entry-desc">攻击者先发正常邮件建立印象，再打电话冒充 IT 帮助台诱骗安装远控工具，甚至派人到办公室用 USB 偷数据，30 分钟内发勒索邮件。练习：TryHackMe "Social Engineering" 模块。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">WhatsApp 鱼叉式钓鱼（NSO Pegasus） <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">间谍软件</span>
+        <span class="tag">移动端</span>
+      </div>
+      <div class="entry-desc">点击一次 WhatsApp 链接，手机即被植入军用级间谍软件 Pegasus，可监控通话、短信、摄像头。练习：TryHackMe "Phishing" 模块，进阶用 Gophish 搭建合法钓鱼模拟环境。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">VS Code 供应链攻击防御 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">开发安全</span>
+        <span class="tag">VS Code</span>
+      </div>
+      <div class="entry-desc">VS Code 扩展自动更新延迟 2 小时，因攻击者入侵开发者账号后通过更新推送恶意代码给百万用户，窃取 SSH 密钥和 API 密钥。练习：TryHackMe "Intro to DevSecOps" 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Linux 内核提权 — "Copy Fail"（CVE-2026-31431） <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">提权</span>
+        <span class="tag">内核漏洞</span>
+        <span class="tag">Linux</span>
+      </div>
+      <div class="entry-desc">已有低权限 Shell 的攻击者可利用文件复制操作的内核缺陷覆盖权限标志，一键升级到 root。工具推荐：LinPEAS 自动化提权枚举。练习：TryHackMe "Linux PrivEsc" 房间。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月8日 周一</div>
@@ -427,9 +503,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '4';
-document.getElementById('totalEntries').textContent = '34';
-document.getElementById('lastUpdate').textContent = '2026-06-08';
+document.getElementById('totalDays').textContent = '5';
+document.getElementById('totalEntries').textContent = '41';
+document.getElementById('lastUpdate').textContent = '2026-06-09';
 </script>
 </body>
 </html>
