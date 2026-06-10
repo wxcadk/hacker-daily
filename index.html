@@ -49,12 +49,55 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">6</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">48</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-10</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">7</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">55</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-11</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">2026-06-11</div>
+      <div class="day-count">7 entries today</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">OS Command Injection - FortiSandbox CVE-2026-25089 <span style="font-size:0.75em">** basic</span></div>
+      <div class="entry-meta"><span class="tag high">HIGH</span><span class="tag">Command Injection</span><span class="tag">FortiSandbox</span><span class="tag">RCE</span></div>
+      <div class="entry-desc">CVSS 9.1 critical vuln. Inject system commands via web input fields. Test with ; whoami or | id. Practice: DVWA Command Injection module, TryHackMe Command Injection room.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">SQL Injection - Login Bypass to Full Database Dump <span style="font-size:0.75em">** basic</span></div>
+      <div class="entry-meta"><span class="tag high">HIGH</span><span class="tag">SQL Injection</span><span class="tag">Web Security</span><span class="tag">OWASP</span></div>
+      <div class="entry-desc">Enter code in login field to bypass auth. Use UNION SELECT to extract other tables. SAP vulnerability case study. Practice: PortSwigger SQL Injection Labs (free).</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">XSS Cross-Site Scripting - Session Hijacking <span style="font-size:0.75em">** basic</span></div>
+      <div class="entry-meta"><span class="tag high">HIGH</span><span class="tag">XSS</span><span class="tag">Web Security</span><span class="tag">Frontend</span></div>
+      <div class="entry-desc">Inject JavaScript into web pages to execute in other users browsers. Reflected via URL, stored in database. Steal cookies with document.cookie. Practice: Google XSS Game (6 levels free).</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Nmap Network Reconnaissance - First Step of Pentesting <span style="font-size:0.75em">* beginner</span></div>
+      <div class="entry-meta"><span class="tag low">LOW</span><span class="tag">Recon</span><span class="tag">Nmap</span><span class="tag">Scanning</span></div>
+      <div class="entry-desc">Map the target: nmap -sn for host discovery, nmap -sV -sC for service detection, --script vuln for automated vuln scanning. SYN half-open scans are stealthier. Practice: TryHackMe Nmap room.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Password Cracking & Credential Attacks - Hashcat + Rules <span style="font-size:0.75em">** basic</span></div>
+      <div class="entry-meta"><span class="tag medium">MEDIUM</span><span class="tag">Password Cracking</span><span class="tag">Hashcat</span><span class="tag">Auth Attack</span></div>
+      <div class="entry-desc">Crack password hashes with Hashcat + rockyou.txt dictionary. Add rule transforms for complexity. Ivanti credential attack case study. GPU makes it hundreds of times faster. Practice: TryHackMe John the Ripper room.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Reverse Shell & Remote Control - Post-Exploitation Basics <span style="font-size:0.75em">*** advanced</span></div>
+      <div class="entry-meta"><span class="tag high">HIGH</span><span class="tag">Reverse Shell</span><span class="tag">Pentesting</span><span class="tag">Post-Exploit</span></div>
+      <div class="entry-desc">Listen with nc -lvnp 4444, execute reverse shell on target. Firewalls block inbound but not outbound connections. PentestMonkey cheat sheet is essential. Practice: TryHackMe Intro to Shell, HackTheBox Starting Point.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Botnet & IoT Hacking - JDY Botnet 1500+ Devices <span style="font-size:0.75em">*** advanced</span></div>
+      <div class="entry-meta"><span class="tag high">HIGH</span><span class="tag">Botnet</span><span class="tag">IoT</span><span class="tag">DDoS</span></div>
+      <div class="entry-desc">Attackers use default passwords to mass-compromise routers and cameras into zombie armies. JDY Botnet controls 1500+ devices for scanning, DDoS, or pivoting. Practice: Shodan search engine to see exposed IoT devices.</div>
+    </div>
+  </div>
+
+
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">2026-06-10</div>
@@ -544,9 +587,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '6';
-document.getElementById('totalEntries').textContent = '48';
-document.getElementById('lastUpdate').textContent = '2026-06-10';
+document.getElementById('totalDays').textContent = '7';
+document.getElementById('totalEntries').textContent = '55';
+document.getElementById('lastUpdate').textContent = '2026-06-11';
 </script>
 </body>
 </html>
