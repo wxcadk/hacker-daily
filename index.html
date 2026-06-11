@@ -49,12 +49,99 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">7</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">55</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-11</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">8</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">63</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-12</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月12日 周四</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Nmap 网络侦察：所有渗透的第一步 <span style="font-size:0.75em">⭐ 入门</span></div>
+      <div class="entry-meta">
+        <span class="tag low">LOW</span>
+        <span class="tag">信息收集</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">侦察</span>
+      </div>
+      <div class="entry-desc">所有渗透都从侦察开始——搞清楚目标网络里有什么机器、开了什么端口、跑了什么服务。先用 <code>nmap -sn</code> 扫网段找活人，再 <code>nmap -sS -p-</code> 挨个敲门看端口，最后 <code>nmap -sV -sC</code> 确认服务版本。练习：TryHackMe "Nmap" 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">npm 供应链攻击：npm install 背后的暗箭 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">npm</span>
+        <span class="tag">开发安全</span>
+      </div>
+      <div class="entry-desc">你敲 <code>npm install</code> 的时候，依赖包里的 postinstall 脚本会自动执行——攻击者入侵流行但无人维护的包，塞入恶意代码，开发者一更新就中招。SSH 密钥、API Key 全被偷走。练习：建一个 npm 项目观察 postinstall 何时执行。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">AI Agent 提示注入攻击：vCard 里的隐形指令 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">LLM</span>
+      </div>
+      <div class="entry-desc">在 vCard（电子名片）的姓名字段塞入隐藏恶意指令，通过 WhatsApp 发给受害者，AI 助手分不清数据和指令，自动执行命令把 AWS 密钥等敏感数据发给攻击者。练习：阅读 OWASP LLM Top 10 了解 AI 安全风险。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Langflow 路径遍历 → RCE：AI 低代码平台沉陷 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">路径遍历</span>
+        <span class="tag">RCE</span>
+        <span class="tag">CVE-2026-5027</span>
+      </div>
+      <div class="entry-desc">Langflow 文件上传接口没做好路径检查，攻击者用 <code>../../</code> 跳出目标目录写入 Web Shell，无需登录即可远程执行代码。全球约 7000 个实例暴露在公网。练习：TryHackMe "Path Traversal" 房间 + DVWA 文件上传漏洞。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Mimikatz 密码提取：Windows 内存里的秘密 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">密码提取</span>
+        <span class="tag">Windows</span>
+        <span class="tag">横向移动</span>
+      </div>
+      <div class="entry-desc">Windows 在 LSASS 进程内存中缓存登录密码，Mimikatz 用 <code>privilege::debug</code> → <code>sekurlsa::logonpasswords</code> 提取明文密码和哈希，再用 Pass-the-Hash 横向移动打域内其他机器。练习：HackTheBox Active Directory 系列 + TryHackMe "AD Basics"。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">BitLocker 加密绕过（GreatXML）：物理接触即破解 <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">加密绕过</span>
+        <span class="tag">BitLocker</span>
+        <span class="tag">物理攻击</span>
+      </div>
+      <div class="entry-desc">往 Windows 恢复分区扔两个 XML 文件（unattend.xml + ReAgent.xml），重启进恢复模式即可获得命令行，绕过 BitLocker 全盘加密——前提是你能物理接触电脑。练习：HackTheBox Windows 系列靶机。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">勒索软件即服务（RaaS）：网络犯罪的加盟模式 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">勒索软件</span>
+        <span class="tag">RaaS</span>
+        <span class="tag">犯罪经济</span>
+      </div>
+      <div class="entry-desc">勒索软件也能加盟——核心开发者出工具，黑客出人力。从暗网购买初始访问凭证，先偷数据（双重勒索）再加密文件，威胁公开索要加密货币赍金。练习：TryHackMe "Ransomware" 房间了解攻击和防御。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">OceanLotus 供应链间谍攻击：国家级水坑行动 <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">APT</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">间谍软件</span>
+      </div>
+      <div class="entry-desc">国家级黑客组织入侵越南流行炒股软件的更新服务器，把后门 SPECTRALVIPER 塞进正常更新包，几十万用户更新软件时自动中招，后门连接 C2 服务器长期窃取金融数据。练习：TryHackMe "Red Team" 路径了解攻击链全貌。</div>
+    </div>
+  </div>
+
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">2026-06-11</div>
@@ -587,9 +674,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '7';
-document.getElementById('totalEntries').textContent = '55';
-document.getElementById('lastUpdate').textContent = '2026-06-11';
+document.getElementById('totalDays').textContent = '8';
+document.getElementById('totalEntries').textContent = '63';
+document.getElementById('lastUpdate').textContent = '2026-06-12';
 </script>
 </body>
 </html>
