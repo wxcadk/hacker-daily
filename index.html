@@ -49,12 +49,88 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">8</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">63</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-12</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">9</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">70</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-14</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月14日 周六</div>
+      <div class="day-count">🛡 今天 7 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html" target="_blank">供应链投毒：AUR 400+ 包被劫持</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">AUR</span>
+        <span class="tag">Linux</span>
+      </div>
+      <div class="entry-desc">攻击者接管 Arch Linux 社区仓库的废弃软件包，篡改 PKGBUILD 构建脚本，用户一编译安装就中招。窃取 SSH 密钥、浏览器密码、加密钱包，再用 eBPF rootkit 隐藏踪迹。练习：TryHackMe "Intro to Supply Chain Attacks" 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html" target="_blank">AI 编程助手劫持 (Agentjacking)</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 高级</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">Agentjacking</span>
+        <span class="tag">Sentry</span>
+      </div>
+      <div class="entry-desc">攻击者往 Sentry 错误平台注入呇 bug 报告，AI 编程助手通过 MCP 协议读取后，把恶意内容当成可信修复建议自动执行，源码和 API 密钥全泄露。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html" target="_blank">Linux 登录后门：APT 潜伏十年</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 高级</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">APT</span>
+        <span class="tag">PAM后门</span>
+        <span class="tag">Linux</span>
+      </div>
+      <div class="entry-desc">国家级黑客篡改 Linux 登录认证模块 PAM，植入万能密码后门，顺手替换 SSH 服务记录所有登录密码。潜伏近十年未被发现，通过横向移动扩散到内网隔离机器。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html" target="_blank">SQL 注入 + 反序列化 = AI Agent 被接管</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">SQL注入</span>
+        <span class="tag">反序列化</span>
+        <span class="tag">RCE</span>
+      </div>
+      <div class="entry-desc">AI 框架 LangGraph 三个漏洞串联：从 SQLite SQL 注入起步，经 metadata 参数注入恶意 SQL，触发 msgpack 反序列化漏洞，最终实现远程代码执行接管整台 AI Agent 服务器。练习：PortSwigger SQL 注入实验室。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Samba 打印任务名命令注入 (CVE-2026-4480) <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">命令注入</span>
+        <span class="tag">Samba</span>
+        <span class="tag">SMB</span>
+      </div>
+      <div class="entry-desc">攻击者往打印任务名称里塞 Shell 命令，Samba 处理名称时直接执行。用 Nmap 扫描 445 端口找目标，构造恶意任务名通过 SMB 协议发送即可触发。练习：HackTheBox Easy 难度 Linux 机器。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html" target="_blank">AI 辅助钓鱼：犯罪团伙用 Gemini 批量造假</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">Smishing</span>
+        <span class="tag">AI滥用</span>
+      </div>
+      <div class="entry-desc">犯罪团伙搭建“钓鱼即服务”平台，用 Google Gemini AI 自动生成仿冒银行、券商的钓鱼网页，通过短信网关批量发送钓鱼短信，效率提升几十倍。练习：TryHackMe "Phishing" 和 "Social Engineering" 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/interpol-takes-down-sniper-dz-phishing.html" target="_blank">INTERPOL 摧毁十年老牌钓鱼平台 Sniper Dz</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">PhaaS</span>
+        <span class="tag">执法</span>
+      </div>
+      <div class="entry-desc">运营十年的钓鱼服务平台被端，201 人被捕，4.5 万条受害者兘条受害者数据被查获。该平台提供预制钓鱼页面模板和托管服务，犯罪分子选个品牌就能生成钓鱼网站，受害者凭证暗网出售变现。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月12日 周四</div>
@@ -674,9 +750,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '8';
-document.getElementById('totalEntries').textContent = '63';
-document.getElementById('lastUpdate').textContent = '2026-06-12';
+document.getElementById('totalDays').textContent = '9';
+document.getElementById('totalEntries').textContent = '70';
+document.getElementById('lastUpdate').textContent = '2026-06-14';
 </script>
 </body>
 </html>
