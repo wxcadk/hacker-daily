@@ -49,12 +49,68 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">9</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">70</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-14</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">10</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">75</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-15</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月15日 周日</div>
+      <div class="day-count">🛡 今天 5 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html" target="_blank">Agentjacking：劫持 AI 编程助手</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">Prompt注入</span>
+        <span class="tag">Agentjacking</span>
+      </div>
+      <div class="entry-desc">攻击者在 GitHub 项目 README 或代码注释里用特殊格式隐藏恶意 Prompt，当开发者用 Cursor / Claude Code 打开项目时，AI 读到隐藏指令后自动执行恶意命令——下载脚本、窃取 API 密钥和环境变量。练习：在自己的 LangChain 项目中测试隐藏指令。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/splunk-cve-2026-20253-unauthenticated-rce.html" target="_blank">Splunk 未授权 RCE（CVE-2026-20253）</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">RCE</span>
+        <span class="tag">CVE-2026-20253</span>
+        <span class="tag">Splunk</span>
+      </div>
+      <div class="entry-desc">CVSS 9.8 严重漏洞，Splunk 内置 PostgreSQL 辅助端点无认证保护，攻击者用 Nmap 扫描 8089 端口找到暴露实例，通过文件操作接口写入 WebShell 获得服务器完全控制权。练习：TryHackMe "Vulnversity" + HackTheBox "Jerry"。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html" target="_blank">Arch Linux 400+ 包供应链投毒</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">AUR</span>
+        <span class="tag">Rootkit</span>
+      </div>
+      <div class="entry-desc">攻击者在 AUR 注册维护者账号，篡改 400+ 热门包的安装脚本，用户执行 yay -S 安装时自动中招。Infostealer 窃取浏览器密码、加密钱包、SSH 密钥，eBPF Rootkit 在内核层面隐藏踪迹。练习：虚拟机里研究 PKGBUILD 文件结构，TryHackMe "Malware Introductory"。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.wiz.io/blog/dirty-frag-fragnesia-linux-kernel-vulnerabilities" target="_blank">Dirty Frag / Fragnesia：Linux 内核提权</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 高级</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">本地提权</span>
+        <span class="tag">内核漏洞</span>
+        <span class="tag">Linux</span>
+      </div>
+      <div class="entry-desc">潜伏 9 年的 Linux 内核内存损坏漏洞，普通用户一条命令变 root。攻击者拿到低权限 Shell 后，编译并执行漏洞利用代码，利用内核 fragment 处理缺陷直接获得超级管理员权限。练习：TryHackMe "Linux PrivEsc" + HackTheBox "Cap" + VulnHub "DC-1"。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/interpol-takes-down-sniper-dz-phishing.html" target="_blank">钓鱳即服务（PhaaS）Sniper Dz 被端</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">钓鱳</span>
+        <span class="tag">PhaaS</span>
+        <span class="tag">社会工程</span>
+      </div>
+      <div class="entry-desc">“钓鱳界的淘宝”被 INTERPOL 打掉，201 人被捕。平台提供预制假 Gmail、假银行页面模板，用户花钱就能生成钓鱳链接，受害者输入密码后实时窃取。练习：TryHackMe "Phishing" 房间 + 搭建 Gophish 实验环境。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月14日 周六</div>
