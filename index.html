@@ -49,12 +49,99 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">10</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">75</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-15</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">11</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">83</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-17</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月17日 周二</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.hackingarticles.in/firewall-evasion-techniques-with-nmap/" target="_blank">Nmap 防火墙绕过扫描</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">扫描绕过</span>
+        <span class="tag">Nmap</span>
+        <span class="tag">防火墙</span>
+      </div>
+      <div class="entry-desc">防火墙封了 SYN 包？换用 FIN/XMAS/NULL 扫描绕过只封 SYN 的规则；用 --data-length 给包“加胖”绕过长度过滤；用 -g 80 伪装 HTTP 流量；用 -D 假IP 混入诱饵。10+ 种扫描变体帮你突破防线。练习：TryHackMe “Further Nmap” 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/clickfix-social-engineering.html" target="_blank">ClickFix 社会工程攻击链</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">无文件攻击</span>
+        <span class="tag">剪贴板劫持</span>
+      </div>
+      <div class="entry-desc">伪造“浏览器已过期”网页，诱导你点击“复制修复命令”按钮——其实剪贴板被写入恶意 PowerShell。你粘贴执行后，恶意代码从远程下载加载器并注册计划任务实现持久化。练习：用浏览器开发者工具分析钓鱼网页的 JavaScript 剪贴板劫持手法。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">反弹 Shell 速查表（经典资源）</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">反弹Shell</span>
+        <span class="tag">Netcat</span>
+        <span class="tag">后渗透</span>
+      </div>
+      <div class="entry-desc">拿到命令执行权限后，下一步就是让目标主动“弹回”一个交互式终端。涵盖 Bash、Python、PowerShell、Netcat 等十几种语言的反弹 Shell 命令，是渗透测试者必备的经典速查表。练习：TryHackMe “Intro to Shells” 房间 + DVWA 命令注入模块。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.hackingarticles.in/ai-driven-pentesting-metasploit-mcp/" target="_blank">AI 驱动 Metasploit 自动化渗透</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">AI渗透</span>
+        <span class="tag">Metasploit</span>
+        <span class="tag">MCP</span>
+      </div>
+      <div class="entry-desc">用自然语言告诉 AI “scan 192.168.1.8”，Claude Desktop 通过 MCP 协议自动调用 Metasploit 发现漏洞、配置利用模块、拿到 root。AI 还能自动横向移动、生成木马、设置监听。练习：先在 Metasploitable 2 上手动学 Metasploit 基础，再尝试 AI 辅助。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.hackingarticles.in/windows-uac-bypass-techniques/" target="_blank">Windows UAC 提权绕过</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">提权绕过</span>
+        <span class="tag">UAC</span>
+        <span class="tag">Windows</span>
+      </div>
+      <div class="entry-desc">你已在管理员组但被 UAC 压制在中等权限。通过 fodhelper.exe 注册表劫持、ComputerDefaults.exe 劫持、SilentCleanup 计划任务利用、Metasploit bypassuac 模块等方法悄悄绕过 UAC 获取完整管理员权限。练习：TryHackMe Windows 提权房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.hackingarticles.in/penelope-shell-handler/" target="_blank">Penelope Shell 管理器</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">后渗透工具</span>
+        <span class="tag">Shell管理</span>
+        <span class="tag">自动化</span>
+      </div>
+      <div class="entry-desc">升级版 Netcat，自动管理多个反弹 Shell、一键上传 winPEAS 提权工具、用 Potato 系列工具提权到 SYSTEM、用 LaZagne 提取浏览器密码、用 Rubeus 做 Kerberoasting、用 Ligolo-ng 做内网穿透。练习：先手动用 Netcat 管理 Shell，再体验 Penelope 自动化。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.hackingarticles.in/netexec-active-directory-pentesting/" target="_blank">NetExec 域渗透全流程</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 高级</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">域渗透</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">NetExec</span>
+      </div>
+      <div class="entry-desc">一个工具搞定 AD 渗透全流程：凭据验证、域用户枚举、BloodHound 攻击路径收集、PowerShell 历史密码提取、远程 LSASS dump 获取 Kerberos 票据、Backup Operator 备份 NTDS.dit 拿到所有域用户哈希。练习：搭建 Windows Server 域控 + HackTheBox AD 靶机。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.hackingarticles.in/metasploit-active-directory-13-stages/" target="_blank">Metasploit AD 13 阶段攻击链</a> <span style="font-size:0.75em">⭐⭐⭐⭐⭐ 专家</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">域渗透</span>
+        <span class="tag">Golden Ticket</span>
+        <span class="tag">AD CS</span>
+      </div>
+      <div class="entry-desc">从普通域用户到“域上帝”的完整攻击方法论：证书模板枚举 ESC1-ESC9、AS-REP Roasting + Kerberoasting、MachineAccountQuota 创建假计算机、RBCD 滥用冒充域控、Shadow Credentials 持久化、最终用 krbtgt 哈希伪造 Golden Ticket 完全控制域。练习：HackTheBox Pro Labs。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月15日 周日</div>
