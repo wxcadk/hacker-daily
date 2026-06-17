@@ -49,12 +49,98 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">11</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">83</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-17</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">12</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">91</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-18</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月18日 周四</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">加密货币剪贴板劫持（Crypto Clipper） <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">恶意软件</span>
+        <span class="tag">加密货币</span>
+      </div>
+      <div class="entry-desc">你复制钱包地址准备转账，恶意软件偷偷换成攻击者的地址。攻击者在 GitHub 建假项目刷星、YouTube 用 AI 生成视频，用 Rust 编写的恶意程序常驻后台监控剪贴板。练习：TryHackMe Intro to Cryptography。</div>
+    </div>    <div class="entry">
+      <div class="entry-title">Microsoft Defender 零日提权（RoguePlanet，CVE-2026-50656） <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">零日漏洞</span>
+        <span class="tag">提权</span>
+        <span class="tag">Windows</span>
+      </div>
+      <div class="entry-desc">Windows 自带杀毒软件被发现竞态条件漏洞，攻击者在 Defender 扫描文件的极短时间窗口内执行恶意操作，从普通用户变成 SYSTEM 最高权限。练习：HackTheBox Blue 靶机 + TryHackMe Windows Privilege Escalation。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">设备代码钓鱼（Device Code Phishing） <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">OAuth</span>
+        <span class="tag">认证绕过</span>
+      </div>
+      <div class="entry-desc">攻击者不用偷密码，只要让你授权一个设备就能接管账号。利用 OAuth 设备授权流程，做钓鱼页面显示临时代码，诱导授权后拿到 Access Token。练习：TryHackMe Phishing + GoPhish。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">npm 供应链攻击（Mastra 包劫持，144 个包） <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">npm</span>
+        <span class="tag">后门</span>
+      </div>
+      <div class="entry-desc">攻击者通过钓鱼拿到 npm 维护者账号，在合法包新版本中注入后门代码。npm install 自动下载恶意版本，偷环境变量、API 密钥、源代码。练习：跑 npm audit，TryHackMe DevSecOps。</div>
+    </div>    <div class="entry">
+      <div class="entry-title">ClickFix 恶意软件投放（多阶段加载器） <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">恶意广告</span>
+        <span class="tag">加载器</span>
+      </div>
+      <div class="entry-desc">伪造系统更新页面骗你下载程序，多层加载绕过杀毒软件检测。用户点修复后下载 Loader，再由 Loader 下载真正的恶意软件。练习：TryHackMe Social Engineering + Burp Suite。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Android 银行木马（Rokarolla，覆盖攻击） <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">移动端</span>
+        <span class="tag">覆盖攻击</span>
+        <span class="tag">木马</span>
+      </div>
+      <div class="entry-desc">恶意 App 在银行应用上方覆盖假登录界面，偷 PIN 码和短信验证码。伪装成正常工具发到第三方商店，申请无障碍服务权限后监视银行应用。练习：TryHackMe Mobile Security + Android Studio。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">JetBrains 恶意插件窃取 AI API 密钥 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">IDE插件</span>
+        <span class="tag">AI安全</span>
+      </div>
+      <div class="entry-desc">IDE 插件市场也有假货。恶意插件扫描 .env 文件找 AI 服务 API 密钥，发给攻击者用你的密钥花你的钱。练习：检查 IDE 插件权限，用 git-secrets 防泄露。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Active Directory 域渗透基础 <span style="font-size:0.75em">⭐⭐⭐⭐ 高级</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">域渗透</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">Kerberos</span>
+      </div>
+      <div class="entry-desc">AD 是企业网络的大脑，拿下它就拿下整个公司。用 BloodHound 画攻击路径图，Kerberoasting 获取域凭证，横向移动提升到域管理员，创建 Golden Ticket 永久维持。练习：HackTheBox AD 靶机 + TryHackMe AD Basics。</div>
+    </div>
+  </div>
+
 
   <div class="day-card">
     <div class="day-header">
@@ -893,9 +979,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '9';
-document.getElementById('totalEntries').textContent = '70';
-document.getElementById('lastUpdate').textContent = '2026-06-14';
+document.getElementById('totalDays').textContent = '12';
+document.getElementById('totalEntries').textContent = '91';
+document.getElementById('lastUpdate').textContent = '2026-06-18';
 </script>
 </body>
 </html>
