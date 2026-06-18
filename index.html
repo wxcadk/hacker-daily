@@ -49,12 +49,80 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">12</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">91</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-18</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">13</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">97</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-19</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月19日 周五</div>
+      <div class="day-count">🛡 今天 6 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html" target="_blank">Agentjacking — 劫持AI编程助手执行恶意代码</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">供应链攻击</span>
+      </div>
+      <div class="entry-desc">攻击者往Bug追踪平台（Sentry）里发假错误报告，AI编程助手读之后被“洗脑”，执行攻击者的代码。成功率高达85%，可绕过EDR/WAF/防火墙，获得开发者级别完整权限。关键术语：MCP（AI工具接口标准）、DSN（Sentry项目标识）、提示注入（向AI输入塞私货）。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html" target="_blank">AUR供应链投毒 — 400+个Linux包植入窃密木马+eBPF Rootkit</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Rootkit</span>
+      </div>
+      <div class="entry-desc">攻击者接管AUR（Arch Linux社区仓库）400多个废弃包，在构建脚本中植入恶意依赖，窃取浏览器Cookie、SSH密钥、Docker凭证。Root权限安装时加载eBPF内核模块实现内核级隐身。关键术语：供应链攻击（打你信任的来源）、Rootkit（恶意软件隐身衣）、eBPF（Linux内核高级监控功能）。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://arstechnica.com/security/2026/06/massive-breach-spills-credentials-for-thousands-of-sensitive-networks/" target="_blank">凭证喷洒攻破7.4万台Fortinet防火墙</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">凭证喷洒</span>
+        <span class="tag">暴力破解</span>
+        <span class="tag">网络设备</span>
+      </div>
+      <div class="entry-desc">用常见弱密码批量尝试Fortinet VPN登录，25000并发连接+45块GPU集群暴力破解哈希，成功入侵全球7.4万台防火墙并横向移动到域控。关键术语：凭证喷洒（少量密码试大量账号）、哈希（密码的加密指纹）、横向移动（从一台机器跳到其他机器扩大战果）。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.samba.org/samba/security/" target="_blank">Samba命令注入 — 打印任务名注入Shell命令 (CVE-2026-4480)</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">命令注入</span>
+        <span class="tag">RCE</span>
+        <span class="tag">Linux</span>
+      </div>
+      <div class="entry-desc">CVSS 10.0满分漏洞！给打印任务起名包含shell管道命令（如 |sh），Samba拼接系统命令时未过滤，无需账号密码即可远程执行代码。关键术语：命令注入（往程序输入塞夹带私货的命令）、RCE（远程代码执行）、Shell管道（用 | 串联命令）。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://arstechnica.com/security/2026/06/peoplesoft-0-day-affecting-hundreds-of-organizations-steals-gigabytes-of-data/" target="_blank">PeopleSoft SSRF零日 — 100+组织数据泄露</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">SSRF</span>
+        <span class="tag">零日漏洞</span>
+        <span class="tag">数据泄露</span>
+      </div>
+      <div class="entry-desc">利用Oracle PeopleSoft SSRF漏洞（CVSS 9.8），让目标服务器当“傀儡”访问内部网络，窃取48GB数据，68%受害者是高校。关键术语：SSRF（服务器端请求伪造，骗门卫帮你开门）、零日漏洞（厂商还不知道的漏洞）、CVSS（漏洞严重程度打分，9.0+为严重）。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/new-greatxml-exploit-bypasses-windows.html" target="_blank">GreatXML — 两个XML文件绕过BitLocker全盘加密</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">加密绕过</span>
+        <span class="tag">Windows</span>
+        <span class="tag">物理攻击</span>
+      </div>
+      <div class="entry-desc">复制unattend.xml和ReAgent.xml到Windows恢复分区，利用WinRE解析XML配置时的漏洞绕过BitLocker加密。前提：系统之前做过Windows Defender离线扫描。关键术语：BitLocker（Windows全盘锁）、WinRE（Windows恢复环境）、恢复分区（硬盘上修电脑工具的存储区）。</div>
+    </div>
+  </div>
+
 
   <div class="day-card">
     <div class="day-header">
