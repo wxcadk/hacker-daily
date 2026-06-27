@@ -49,12 +49,100 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">14</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">105</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-20</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">15</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">113</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-28</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月28日 周日</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">Linux pedit COW 内存腐蚀提权</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">提权</span>
+        <span class="tag">内核漏洞</span>
+        <span class="tag">Linux</span>
+      </div>
+      <div class="entry-desc">攻击者利用 act_pedit 内核模块的越界写入漏洞，修改页缓存中 SUID 程序的内存副本（磁盘文件不变），注入提权代码获取 root shell。系统完整性检查无法发现，因为磁盘文件未被改动。关键术语：SUID（借用文件所有者权限的特殊权限）、COW（写时复制，修改时才真正复制数据的内存优化技术）、页缓存（内核缓存磁盘文件加速读取的机制）。练习：TryHackMe Linux PrivEsc 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">npm/GitHub Actions 供应链投毒攻击</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">npm</span>
+        <span class="tag">CI/CD</span>
+      </div>
+      <div class="entry-desc">攻击者通过提交 PR 或劫持维护者账号，在流行 npm 包中注入恶意代码。开发者 npm install 时自动下载恶意版本，窃取 .npmrc、GitHub token、AWS 密钥等凭证，并利用 GitHub Actions 权限感染更多包形成连锁反应。关键术语：供应链攻击（攻击你依赖的上游组件）、PR（向开源项目提交代码修改的请求）、凭证（登录用的密码/API Key/Token）。练习：TryHackMe DevSecOps 房间，用 npm audit 检查依赖安全。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">FortiBleed 防火墙凭据收割</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">网络设备</span>
+        <span class="tag">暴力破解</span>
+        <span class="tag">嗅探</span>
+      </div>
+      <div class="entry-desc">攻击者用 Shodan 搜索暴露的 FortiGate 防火墙，暴力破解登录后安装嗅探工具，截获所有经过防火墙的明文密码和哈希，离线破解后横向移动攻入企业内网。关键术语：FortiGate（企业防火墙产品）、暴力破解（用大量密码逐一尝试）、嗅探器（偷听网络数据的工具）、哈希（密码的加密指纹）、Shodan（搜索互联网暴露设备的引擎）。练习：HackTheBox 学习 Nmap 扫描和 Hydra 暴力破解。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">WhatsApp VBScript 钓鱼攻击</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">远程控制</span>
+      </div>
+      <div class="entry-desc">攻击者通过 WhatsApp 发送伪装成财务报表的 .vbs 文件，双击后 VBScript 自动下载更多恶意组件，最终安装 AnyDesk 等远程控制工具完全接管电脑。关键术语：钓鱼（伪装可信来源骗你执行恶意操作）、VBScript（Windows 脚本语言，能执行系统命令）、RMM 工具（远程管理工具，合法工具被攻击者滥用）。练习：TryHackMe Phishing 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">Signal 备份密钥钓鱼（俄情报机构）</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">端到端加密</span>
+        <span class="tag">APT</span>
+      </div>
+      <div class="entry-desc">FBI/CISA 警告俄罗斯情报机构通过伪装可信联系人，以验证账号为由骗取 Signal 备份恢复密钥，在自己设备上恢复目标全部聊天记录。密钥长期有效，换号也无法阻止。关键术语：端到端加密（只有你和对方能看消息）、备份恢复密钥（解密备份的万能钥匙）、APT（国家级黑客组织）。练习：TryHackMe OSINT 房间了解社工攻击原理。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">SquidBleed：29年老漏洞泄露密码</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">信息泄露</span>
+        <span class="tag">代理服务器</span>
+        <span class="tag">堆溢出</span>
+      </div>
+      <div class="entry-desc">Squid 代理软件中存在29年的漏洞，同一代理网络的合法用户发送特制 FTP 请求触发堆溢出，代理服务器吐出其他用户的 HTTP 请求数据，可提取密码、Cookie、会话令牌。关键术语：代理（代替你访问网站的中间服务器）、堆溢出（程序读取不该读的内存数据，类似 Heartbleed）、会话令牌（登录后的通行证，拿到即可冒充登录）。练习：先学 HTTP 协议基础，理解代理服务器工作原理。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.sentinelone.com/" target="_blank">Gaslight：恶意软件欺骗 AI 分析工具</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 高级</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">恶意软件</span>
+      </div>
+      <div class="entry-desc">首个针对 AI 分析工具的提示注入恶意软件。Rust 编写的 macOS 信息窃取器嵌入伪造的系统故障消息，安全分析师用 AI 工具分析样本时，AI 误以为环境出问题而停止分析或给出错误结论，成功逃脱自动化检测。关键术语：提示注入（给 AI 喂精心构造的输入骗它执行非预期操作）、信息窃取器（专门偷密码/Cookie/加密钱包的恶意软件）、沙箱（隔离的分析环境）。练习：去 VirusTotal 玩文件扫描了解恶意软件分析基础。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://www.paradigm.sh/" target="_blank">USBLitR8：Apple 芯片不可修补漏洞</a> <span style="font-size:0.75em">⭐⭐⭐⭐⭐ 专家</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">硬件安全</span>
+        <span class="tag">Apple</span>
+        <span class="tag">不可修补</span>
+      </div>
+      <div class="entry-desc">Apple A12/A13 芯片存在硬件级 SecureROM 漏洞，物理接触设备 2 秒即可绕过所有安全保护执行任意代码，且任何软件更新都无法修复。攻击者用树莓派 Pico 2 微控制器触发 DFU 模式漏洞，在苹果签名验证前注入代码。关键术语：SecureROM（烧死在芯片硅片里的最底层引导代码）、DFU 模式（设备固件恢复模式）、不可修补（漏洞在硬件层面，软件更新无法修复）。练习：初学者了解安全启动（Secure Boot）概念即可，不建议实操。</div>
+    </div>
+  </div>
+
 
   <div class="day-card">
     <div class="day-header">
@@ -1131,9 +1219,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '14';
-document.getElementById('totalEntries').textContent = '105';
-document.getElementById('lastUpdate').textContent = '2026-06-20';
+document.getElementById('totalDays').textContent = '15';
+document.getElementById('totalEntries').textContent = '113';
+document.getElementById('lastUpdate').textContent = '2026-06-28';
 </script>
 </body>
 </html>
