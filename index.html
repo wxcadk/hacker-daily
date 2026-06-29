@@ -49,12 +49,88 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">15</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">113</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-28</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">16</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">120</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-30</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年6月30日 周一</div>
+      <div class="day-count">🛡 今天 7 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">React Server Components RCE (React2Shell)</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">RCE</span>
+        <span class="tag">React</span>
+      </div>
+      <div class="entry-desc">攻击者利用 React 服务端渲染的机制，构造恶意 RSC payload 注入服务端渲染流程，服务端信任该 payload 执行攻击者代码，从网页漏洞升级到完全控制服务器拿到反弹 Shell。关键术语：RSC（React Server Components，代码在服务器运行而非浏览器）、RCE（远程代码执行）、反弹 Shell（让目标服务器主动连回攻击者建立控制通道）。练习：HackTheBox Web 类机器 Starting Point 系列。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">npm/Go 供应链攻击 - VS Code 自动任务窃密</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">npm</span>
+        <span class="tag">窃取器</span>
+      </div>
+      <div class="entry-desc">攻击者劫持流行 npm/Go 包，植入 .vscode/tasks.json（runOn: folderOpen）实现打开项目即执行。恶意代码伪装成 .woff2 字体文件骗过安全检测，用区块链交易数据当暗号本获取加密 C2 地址，通过 Socket.io 建立后门连接，Telegram Bot 传出窃取数据。关键术语：供应链攻击（攻击你依赖的上游软件包）、死信投递（把指令藏在公开地方如区块链备注）、C2 服务器（攻击者指挥中心）。练习：TryHackMe DevSecOps 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">libssh2 整数溢出 - SSH 客户端 RCE (CVE-2026-55200)</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">内存溢出</span>
+        <span class="tag">SSH</span>
+        <span class="tag">RCE</span>
+      </div>
+      <div class="entry-desc">攻击者搭恶意 SSH 服务器，客户端一连接即发送超大 packet_length=0xffffffff，整数溢出导致分配极小内存但后续数据远远超出，堆溢出覆盖程序执行流程。影响 curl、Git、PHP 等所有使用 libssh2 的程序，CVSS 9.2 严重级别，无需用户交互。关键术语：整数溢出（数字超最大值会绕回去）、堆溢出（往内存塞太多东西覆盖邻居）。练习：TryHackMe Buffer Overflow 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">DLL 侧加载 + Zoho WorkDrive 当 C2 - Mustang Panda APT 攻击链</a> <span style="font-size:0.75em">⭐⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">APT</span>
+        <span class="tag">DLL侧加载</span>
+        <span class="tag">云存储</span>
+      </div>
+      <div class="entry-desc">国家级黑客组织发精准钓鱼邮件，ZIP 里有合法软件+同目录恶意 DLL，Windows 优先加载同目录 DLL（DLL Search Order）。恶意代码用偷来的 Zoho 账号登录云存储藏指令，部署后门通过 WebSocket 加密通信，安全设备完全看不出异常。关键术语：DLL 侧加载（利用 Windows DLL 加载优先级插入恶意文件）、鱼叉式钓鱼（专门研究目标定制的钓鱼）、APT（国家级黑客组织）。练习：HackTheBox Active Directory 类机器。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">HTML 走私 + WinRAR 漏洞 + USB 感染 - Gamaredon 三连击</a> <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">攻击链</span>
+        <span class="tag">HTML走私</span>
+        <span class="tag">APT</span>
+      </div>
+      <div class="entry-desc">俄罗斯 Gamaredon 组织三招组合拳：钓鱼邮件附 XHTML 文件用 JavaScript Base64 编码恶意文件（HTML 走私绕过邮件检测），下载 HTA 执行恶意代码安装 PteroSand，利用 WinRAR 漏洞塞入启动文件夹持久化，部署 USB 感染器替换 U 盘文件为恶意快捷方式。关键术语：HTML 走私（网页代码藏恶意文件编码版本绕过检测）、HTA（Windows HTML 应用能执行系统命令）、持久化（让恶意程序每次开机自动运行）。练习：TryHackMe Malware Analysis 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">恶意 Chrome 扩展 - 仿冒 Perplexity AI 搜索劫持</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">浏览器安全</span>
+        <span class="tag">搜索劫持</span>
+        <span class="tag">社会工程</span>
+      </div>
+      <div class="entry-desc">Chrome 商店上传仿冒扩展 Search for perplexity ai，用相似域名 perplexity-ai.online 增加可信度。安装后修改默认搜索引擎，每次搜索先经过攻击者服务器记录再转到正常搜索。关键术语：浏览器扩展（装在浏览器里的小程序，权限很大）、搜索劫持（偷偷改掉默认搜索引擎）、中间人攻击（攻击者秘密站在你和目标之间偷看通信）。练习：TryHackMe Web Fundamentals，自己检查 Chrome 扩展程序列表。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title"><a href="https://thehackernews.com/2026/06/" target="_blank">AI 自动化渗透测试 - ArgusRed 发现整数溢出漏洞</a> <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">自动化测试</span>
+        <span class="tag">整数溢出</span>
+      </div>
+      <div class="entry-desc">ArgusRed 工具对 Google 开源银行应用自动做代码审计+沙箱测试，发现金额加手续费溢出为负数的业务逻辑漏洞，可绕过支付验证白媵。关键术语：CLI（命令行工具用文字命令操作）、沙箱（隔离测试环境搞破坏不影响真实系统）、代码审计（检查源代码找安全问题）。练习：HackTheBox Starting Point 系列入门，可自部署 Bank of Anthos 练习。</div>
+    </div>
+  </div>
 
   <div class="day-card">
     <div class="day-header">
@@ -1219,9 +1295,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '15';
-document.getElementById('totalEntries').textContent = '113';
-document.getElementById('lastUpdate').textContent = '2026-06-28';
+document.getElementById('totalDays').textContent = '16';
+document.getElementById('totalEntries').textContent = '120';
+document.getElementById('lastUpdate').textContent = '2026-06-30';
 </script>
 </body>
 </html>
