@@ -49,12 +49,99 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">16</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">120</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-06-30</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">17</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">128</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-01</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年7月1日 周三</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">MCP 工具描述投毒 — 劫持 AI 代理 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">MCP</span>
+      </div>
+      <div class="entry-desc">攻击者在 AI 工具的 MCP 配置里“下毒”，篡改工具说明文字写入恶意指令。当你正常使用 AI 时，AI 读到被篡改的说明自动执行，数据悄悄外泄。<b>关键术语：</b>MCP（Model Context Protocol，让 AI 和外部工具对话的标准协议）、AI 代理（能自己干活的 AI 系统）、数据外泄（把数据从内部偷偷传到外面）。练习：OWASP LLM Top 10 实验环境，搭 LangChain 本地环境试试注入指令。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">XSS 升级为 RCE — 从网页漏洞到服务器氦陷 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">XSS</span>
+        <span class="tag">RCE</span>
+      </div>
+      <div class="entry-desc">本来只能在浏览器里搞事情的 XSS 漏洞，通过 OpenClinic GA 的文件上传功能被升级为能直接控制服务器的 RCE。攻击者注入 JavaScript 上传 WebShell 后门脚本，通过 WebShell 执行任何系统命令。<b>关键术语：</b>XSS（跨站脚本攻击）、RCE（远程代码执行）、WebShell（服务器上的“遥控器”）、Payload（实际执行的恶意代码）。练习：DVWA 靶场练基础 XSS，然后试着把 XSS 和文件上传组合起来。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">RustDuck 僵尸网络 — 弱密码就是最大的漏洞 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">僵尸网络</span>
+        <span class="tag">暴力破解</span>
+        <span class="tag">DDoS</span>
+      </div>
+      <div class="entry-desc">用 Rust 重写的僵尸网络专门扫描互联网上弱密码的路由器、摄像头和安卓盒子。攻击者用 admin/root 等常见密码字典暴力破解，成功后植入恶意程序并修改启动配置实现持久化，组成 DDoS 大军等待指令。<b>关键术语：</b>僵尸网络（被控制的一大群设备）、DDoS（用海量流量淹没目标服务器）、暴力破解（试遍所有密码组合）、C2 服务器（攻击者的“指挥中心”）、持久化（让恶意程序重启后还能自动运行）。练习：TryHackMe "Vulnversity"，练习 Nmap 扫描 + Hydra 暴力破解。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Langflow RCE — AI 应用一行代码就氦陷 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">RCE</span>
+        <span class="tag">API安全</span>
+      </div>
+      <div class="entry-desc">流行的 AI 工作流工具 Langflow 暴露在网上的 API 没有认证，攻击者一行 Python 代码就能拿下整台服务器。代码执行后下载脚本关掉防火墙，添加定时任务保持存活，通过 SSH 密钥感染同网段其他机器，部署 XMRig 挖矿。<b>关键术语：</b>API 端点（应用提供的网络接口）、横向移动（从一台氦陷机器跳到其他机器）、Cron（Linux 定时任务调度器）、XMRig（门罗币挖矿程序）。练习：TryHackMe "Archetype" 练习反弹 Shell + Linux 提权。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">浏览器扩展投毒 — 偷偷换掉你的加密货币地址 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">浏览器安全</span>
+        <span class="tag">加密货币</span>
+        <span class="tag">剪贴板劫持</span>
+      </div>
+      <div class="entry-desc">假冒“Google Notes”的恶意浏览器扩展通过钓鱼网站传播，安装后持续监听剪贴板，检测到加密货币地址时瞬间替换成攻击者的地址。攻击者用以太坊智能合约管理基础设施，一笔交易就能更换所有 C2 服务器（EtherHiding）。<b>关键术语：</b>浏览器扩展（装在浏览器里的小程序，权限很大）、剪贴板劫持（监控并篡改复制粘贴的内容）、智能合约（运行在区块链上的自动执行程序）、EtherHiding（利用区块链存储恶意服务器地址）。练习：TryHackMe "Web Fundamentals" 学浏览器安全。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">BioShocking — 用“游戏”骗 AI 浏览器泄露密码 <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">社会工程</span>
+      </div>
+      <div class="entry-desc">攻击者创建假益智游戏网页，在页面内容里藏对 AI 的“暗号指令”。游戏逻辑“奖励”错误答案逐步训练 AI 忽略安全规则，AI 被“洗脑”后从已登录网站提取密码、密钥等敏感信息发送给攻击者。<b>关键术语：</b>间接提示注入（通过网页内容等外部数据给 AI“下指令”）、AI 浏览器（集成了 AI 代理的浏览器）、凭据（登录信息包括密码/API 密钥/SSH 密钥）。练习：PortSwigger Web Security Academy 学 Web 安全基础。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Auth0 默认配置利用 — XSS + 认证绕过攻击链 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">认证安全</span>
+        <span class="tag">XSS</span>
+        <span class="tag">Web安全</span>
+      </div>
+      <div class="entry-desc">Auth0 是很流行的登录服务，但默认配置不够安全。攻击者在使用 Auth0 的网站上找到 XSS 漏洞，分析默认 Cookie 和 Token 处理方式后，通过 XSS 窃取认证 Token 冒充受害者登录，完全接管账号。<b>关键术语：</b>Auth0（流行的“登录即服务”平台）、会话劫持（偷走登录凭证冒充身份）、Token（证明你是谁的“数字通行证”）、攻击链（把多个小漏洞串起来形成完整攻击路径）。练习：PortSwigger "Authentication" 章节练习认证漏洞。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Samsung 内核 UAF — 安全防御本身成为漏洞 <span style="font-size:0.75em">⭐⭐⭐⭐⭐ 专家</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">内核漏洞</span>
+        <span class="tag">移动安全</span>
+        <span class="tag">UAF</span>
+      </div>
+      <div class="entry-desc">三星手机用来保护系统的安全功能反而成了攻击入口。攻击者通过特定操作让内核释放安全相关的数据结构，在“释放”和“重新分配”之间的时间窗口用新数据占据被释放的内存，控制安全防御逻辑，从普通 App 提升到内核权限完全控制手机。<b>关键术语：</b>UAF/释放后使用（程序还在用已被“扔掉”的内存）、内核（操作系统核心，拥有最高权限）、提权（从普通用户升级到管理员）、竞态条件（两个操作抢着执行，攻击者利用时间差）。练习：pwnable.kr 或 Exploit Education，需要 C 语言基础。</div>
+    </div>
+  </div>
+
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年6月30日 周一</div>
@@ -1295,9 +1382,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '16';
-document.getElementById('totalEntries').textContent = '120';
-document.getElementById('lastUpdate').textContent = '2026-06-30';
+document.getElementById('totalDays').textContent = '17';
+document.getElementById('totalEntries').textContent = '128';
+document.getElementById('lastUpdate').textContent = '2026-07-01';
 </script>
 </body>
 </html>
