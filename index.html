@@ -49,12 +49,98 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">17</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">128</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-01</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">18</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">136</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-02</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年7月2日 周四</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">物联网链式攻击 — 远程开门禁 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">IoT安全</span>
+        <span class="tag">漏洞链</span>
+        <span class="tag">物理安全</span>
+      </div>
+      <div class="entry-desc">安全研究员发现自己公寓门禁系统有一串漏洞，可以从世界任何地方远程开门。连接楼内 Wi-Fi 后用 Nmap 扫描发现 8080 端口裸契 API，无需密码即可查看所有住户信息，再从配置接口拿到云端密钥直接调用开门接口。<b>关键术语：</b>Nmap（网络扫描工具）、REST API（程序之间的“点餐窗口”）、Bearer Token（通行证）、漏洞链（几个小洞串成一条完整攻击路线）。练习：TryHackMe Network Security 模块练 Nmap，用 Burp Suite 拦截和重放 HTTP 请求。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">QR 码钓鱼（Quishing）— 二维码绕过邮件安全 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">钓鱼攻击</span>
+        <span class="tag">QR码</span>
+        <span class="tag">社会工程</span>
+      </div>
+      <div class="entry-desc">钓鱼邮件不放链接了，放二维码——安全扫描器看不懂图片，恶意网址就这么溜过去了。伪造 Microsoft 365 安全提醒邮件，正文只有一张二维码。<b>关键术语：</b>钓鱼（假装成银行/公司骗你输入密码）、邮件网关（企业邮件的安检门）、Quishing（QR+Phishing合成词）。练习：Google Phishing Quiz 测试识别能力，TryHackMe Phishing 模块有完整实战。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">JavaScript 武器化 — XSS 攻击入门 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">XSS</span>
+        <span class="tag">前端攻击</span>
+      </div>
+      <div class="entry-desc">网站让你输入内容时没做好过滤，攻击者塞进去的恶意脚本会在别人浏览器里执行。<b>关键术语：</b>XSS（跨站脚本）、Cookie（浏览器记住登录状态的小文件）、Stored XSS（恶意脚本存进数据库）、CSP（内容安全策略）。练习：PortSwigger Web Security Academy XSS 实验室（免费），DVWA 靶场练习三种 XSS 类型。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">SSRF — 让服务器替你内网漫游 <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">云安全</span>
+        <span class="tag">SSRF</span>
+      </div>
+      <div class="entry-desc">网站有个生成 PDF 功能，攻击者利用它让服务器去访问 AWS 内部密钥服务，偷到了云服务器凭证。<b>关键术语：</b>SSRF（服务端请求伪造）、AWS 元数据服务（云服务器的身份证办公室，特殊地址 169.254.169.254）、IAM 角色（AWS 权限系统）。练习：PortSwigger SSRF 实验室。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">零点击攻击 — 不碰手机也能入侵（iOS + WhatsApp） <span style="font-size:0.75em">⭐⭐⭐⭐⭐ 专家</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">移动安全</span>
+        <span class="tag">零点击</span>
+        <span class="tag">漏洞链</span>
+      </div>
+      <div class="entry-desc">攻击者通过 WhatsApp 发一条消息，目标的 iPhone 不用做任何事就被控制了（已修复）。<b>关键术语：</b>零点击（不需要受害者做任何操作）、沙箱（操作系统给 App 划的围栏）、漏洞链（多个漏洞串联像多米诺骨牌）。练习：TryHackMe Mobile Security 模块。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">浏览器扩展 — 被忽视的后门 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">浏览器安全</span>
+        <span class="tag">扩展投毒</span>
+        <span class="tag">剪贴板劫持</span>
+      </div>
+      <div class="entry-desc">你装的浏览器扩展能看到你所有网页内容，包括银行页面和密码。<b>关键术语：</b>浏览器扩展（装在浏览器里的小程序，权限比你想象的大）、内容脚本（扩展注入到网页中的代码）、剪贴板劫持（偷偷替换你复制的内容）。练习：自己写一个简单的 Chrome 扩展理解权限模型。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">智能手表固件签名绕过 <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">IoT安全</span>
+        <span class="tag">逆向工程</span>
+        <span class="tag">固件安全</span>
+      </div>
+      <div class="entry-desc">研究员逆向了小米手环的固件，绕过签名验证刷入自定义固件。<b>关键术语：</b>固件（设备里运行的底层软件）、逆向工程（不看源代码通过分析成品理解工作原理）、Ghidra（NSA 开发的免费逆向工具）。练习：PicoCTF 的逆向挑战。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">绕过 Cloudflare WAF 实现 XSS <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">WAF绕过</span>
+        <span class="tag">XSS</span>
+      </div>
+      <div class="entry-desc">网站用了 Cloudflare 防火墙挡攻击，但研究员找到了绕过方法照样注入恶意脚本。<b>关键术语：</b>WAF（Web 应用防火墙）、Payload（攻击中真正干活的恶意代码部分）、编码绕过（把恶意代码化妆成看起来无害）。练习：PortSwigger XSS 过滤器绕过实验。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年7月1日 周三</div>
@@ -1382,9 +1468,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '17';
-document.getElementById('totalEntries').textContent = '128';
-document.getElementById('lastUpdate').textContent = '2026-07-01';
+document.getElementById('totalDays').textContent = '18';
+document.getElementById('totalEntries').textContent = '136';
+document.getElementById('lastUpdate').textContent = '2026-07-02';
 </script>
 </body>
 </html>
