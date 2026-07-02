@@ -49,12 +49,98 @@ footer a{color:#98c379}
 </div>
 
 <div class="stats">
-<div class="stat-card"><div class="stat-val" id="totalDays">18</div><div class="stat-label">已发布天数</div></div>
-<div class="stat-card"><div class="stat-val" id="totalEntries">136</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-02</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="totalDays">19</div><div class="stat-label">已发布天数</div></div>
+<div class="stat-card"><div class="stat-val" id="totalEntries">144</div><div class="stat-label">知识条目</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-03</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年7月3日 周五</div>
+      <div class="day-count">🛡 今天 8 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">AutoJack — AI代理劫持实现远程代码执行 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">RCE</span>
+        <span class="tag">WebSocket</span>
+      </div>
+      <div class="entry-desc">攻击者构造恶意网页，AI浏览代理访问时JavaScript自动连接本机MCP WebSocket服务，因localhost信任跳过认证，攻击者可执行任意命令。关键术语：AI代理（能自主执行任务的AI程序）、MCP（AI代理与本地服务通信的协议）、localhost（本机回环地址127.0.0.1，服务信任来自这里的连接）、RCE（远程代码执行）。练习：TryHackMe OWASP Top 10 房间理解localhost信任模型。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">WhatsApp VBScript社工攻击 — 伪装文档投递远控 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">社会工程</span>
+        <span class="tag">恶意软件</span>
+        <span class="tag">远控</span>
+      </div>
+      <div class="entry-desc">通过WhatsApp发送伪装成“财务报表”的.vbs文件，受害者双击后自动下载ManageEngine RMM远程管理工具，攻击者获得完整远程桌面控制。关键术语：VBScript（微软脚本语言，Windows自带双击即运行）、社工（利用人的心理弱点欺骗）、RMM（远程监控管理工具，被滥用即成合法远控）、多阶段攻击（分步下载恶意组件拼装攻击）。练习：TryHackMe Social Engineering 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">假AI技能投毒 — 26000个AI代理被感染 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">TOCTOU</span>
+      </div>
+      <div class="entry-desc">攻击者创建看似正常的AI技能提交开源市场，安全扫描器查不出问题。技能藏外部链接初始指向正常页面，通过提交PR合并到热门仓库“继承”星标，在Instagram投广告吸引安装，等安装量够了再把链接换成恶意指令。关键术语：供应链攻击（攻击你信任的供货商）、PR（向开源项目提交代码修改请求）、AI技能（AI代理加载的指令包）、TOCTOU（检查时安全，用时已被换的时间差攻击）。练习：TryHackMe Intro to Defensive Security。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">SQL注入绕过机场安检 — 真实Bug Bounty <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">SQL注入</span>
+        <span class="tag">Web安全</span>
+        <span class="tag">Bug Bounty</span>
+      </div>
+      <div class="entry-desc">安全研究员发现美国TSA PreCheck系统存在SQL注入，输入单引号‘测试后系统未过滤用户输入，构造‘ OR 1=1 --让查询条件永远为真，绕过身份验证。关键术语：SQL注入（把恶意SQL代码注入程序查询欺骗数据库）、Payload（让系统中招的特殊内容）、参数化查询（把数据和SQL命令分开的安全写法）、Bug Bounty（企业付费请研究员找漏洞的计划）。练习：PortSwigger SQL Injection 章节。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Gaslight — 恶意软件用提示注入欺骗AI分析工具 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">提示注入</span>
+        <span class="tag">反分析</span>
+      </div>
+      <div class="entry-desc">macOS恶意软件体内嵌入38条Base64编码的假系统消息，安全分析师用AI工具分析时AI误读为系统错误，报告内存不足、token过期等假错误放弃分析。恶意软件还用Telegram Bot作C2，伪装苹果系统服务窃取终端历史、WiFi密码、浏览器数据。关键术语：Prompt Injection（向AI输入恶意指令操纸行为）、C2（攻击者远程操控被感染机器的指挥部）、反分析（恶意软件逃避安全研究的技术）。练习：TryHackMe Malware Introductory 房间。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Cisco SD-WAN零日 — CSV注入提权到Root <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">零日漏洞</span>
+        <span class="tag">提权</span>
+        <span class="tag">CSV注入</span>
+      </div>
+      <div class="entry-desc">攻击者获普通管理员权限后上传恶意CSV文件，利用CVE-2026-20245执行任意命令，在/etc/passwd创建隐藏root账户窃取网络配置，最后删除文件撤销更改改回密码完美反取证。关键术语：零日漏洞（厂商不知道的无补丁漏洞）、提权（从普通员工提升到总经理权限）、CSV注入（在CSV文件中嵌入恶意命令）、反取证（删除隐藏数字证据让安全团队无法追踪）。练习：TryHackMe Linux PrivEsc 房间，进阶 HackTheBox Postman。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">FortiBleed — 1.1亿凭证大规模窃取 <span style="font-size:0.75em">⭐⭐⭐⭐ 高阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">凭证窃取</span>
+        <span class="tag">防火墙</span>
+        <span class="tag">暴力破解</span>
+      </div>
+      <div class="entry-desc">攻击者利用FortiGate防火墙漏洞窃取1.1亿用户凭证。先暴力破解防火墙登录，安装嗅探工具截获经过防火墙的明文密码和哈希，离线破解后横向移动攻入企业内网。关键术语：凭证（登录用的密码/API Key/Token）、嗅探器（偷听网络数据的工具）、哈希（密码的加密指纹）、离线破解（把哈希下载到本地用GPU暴力计算）。练习：HackTheBox 学习网络侦察和暴力破解。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">usbliter8 — Apple芯片USB物理攻击 <span style="font-size:0.75em">⭐⭐⭐⭐⭐ 专家</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">硬件漏洞</span>
+        <span class="tag">USB安全</span>
+        <span class="tag">Apple</span>
+      </div>
+      <div class="entry-desc">针对Apple Silicon芯片的USB物理攻击，通过特制USB设备利用芯片级漏洞实现攻击。需要物理接触目标设备，属于高难度硬件攻击。关键术语：物理攻击（需要实际接触设备的攻击方式）、固件（设备底层运行的软件）、芯片级漏洞（处理器硬件设计缺陷）。练习：了解USB协议基础，pwn.college 硬件安全课程。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年7月2日 周四</div>
@@ -1468,9 +1554,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '18';
-document.getElementById('totalEntries').textContent = '136';
-document.getElementById('lastUpdate').textContent = '2026-07-02';
+document.getElementById('totalDays').textContent = '19';
+document.getElementById('totalEntries').textContent = '144';
+document.getElementById('lastUpdate').textContent = '2026-07-03';
 </script>
 </body>
 </html>
