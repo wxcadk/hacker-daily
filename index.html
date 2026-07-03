@@ -51,10 +51,76 @@ footer a{color:#98c379}
 <div class="stats">
 <div class="stat-card"><div class="stat-val" id="totalDays">19</div><div class="stat-label">已发布天数</div></div>
 <div class="stat-card"><div class="stat-val" id="totalEntries">144</div><div class="stat-label">知识条目</div></div>
-<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-03</div><div class="stat-label">最新更新</div></div>
+<div class="stat-card"><div class="stat-val" id="lastUpdate">2026-07-04</div><div class="stat-label">最新更新</div></div>
 </div>
 
 <div id="entries">
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-date">📅 2026年7月4日 周六</div>
+      <div class="day-count">🔓 今天 6 条</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Bad Epoll — Linux 内核提权漏洞 (CVE-2026-46242) <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">内核漏洞</span>
+        <span class="tag">提权</span>
+        <span class="tag">Use-After-Free</span>
+      </div>
+      <div class="entry-desc">普通用户利用 Linux 内核 epoll 竞态条件实现提权，成功率 99%。Epoll 是 Linux 内核的监控员，负责高效监听大量文件和网络事件。攻击者制造竞态条件（两个操作同时抢一个资源），让两个内核代码路径同时清理同一块内存，触发 Use-After-Free（程序释放内存但还在用），在仅 6 条机器指令的窗口内覆写内核内存提升为 root，甚至能从 Chrome 沙箱触发。练习：TryHackMe Linux PrivEsc 房间，先学 Dirty Pipe（同类漏洞）入门。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">朝鲜黑客 npm 供应链投毒 — 伪装 Rollup 包窃取凭证 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">供应链攻击</span>
+        <span class="tag">npm</span>
+        <span class="tag">Lazarus</span>
+      </div>
+      <div class="entry-desc">Lazarus Group 在 npm 发布名字超像真包的假包（如 rollup-packages-polyfill-core），描述和结构跟真包几乎一模一样。npm install 时自动执行 Base64 编码的隐藏命令，先检测是否在沙箱（安全研究人员的隔离环境）里，再下载加密载荷全面窃取 SSH 密钥、云凭证、加密钱包。供应链攻击核心：不打你，打你用的工具。练习：TryHackMe OWASP Top 10 房间，自己跑 npm audit 检查依赖安全。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">Avalon 恶意软件框架 — 从钓鱼到勒索的全链条攻击 <span style="font-size:0.75em">⭐⭐⭐ 进阶</span></div>
+      <div class="entry-meta">
+        <span class="tag high">HIGH</span>
+        <span class="tag">恶意软件</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">勒索软件</span>
+      </div>
+      <div class="entry-desc">瑞士军刀式恶意软件，完整攻击链：钓鱼邮件假装法律文件 → Proton Drive 下载加密压缩包 → ISO 镜像（光盘完整副本）藏恶意代码 → 伪装 PDF 的 LNK 快捷方式 → MSBuild（微软构建工具，被滥用来执行恶意代码，叫 Living-off-the-Land）执行 → 干扰 ETW（Windows 监控摄像头）让安全工具失明 → 偷凭证 → 横向移动 → 部署 CrownX 勒索软件。练习：TryHackMe Phishing 房间 + Wireshark 抓包分析。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">钓鱼攻击绕过邮件安全网关 (SEG) 的技术 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">钓鱼</span>
+        <span class="tag">邮件安全</span>
+        <span class="tag">无文件攻击</span>
+      </div>
+      <div class="entry-desc">高级钓鱼邮件不带附件：从被入侵的合法邮箱发邮，SPF/DKIM/DMARC（三种邮件身份验证协议）全部通过；不发附件，发链接到 Google Docs、OneDrive 等合法云服务；链接经过多层跳转，每层都是合法网站；根据访问者 IP 和浏览器类型决定是否展示恶意内容；恶意代码只在内存中运行（无文件攻击），不写磁盘，传统杀毒抓不到。练习：Google 邮件头分析工具看 SPF/DKIM 结果。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">AI (LLM) 渗透测试 — HackTheBox 评测大语言模型攻防能力 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">渗透测试</span>
+        <span class="tag">LLM</span>
+      </div>
+      <div class="entry-desc">HackTheBox 测试大语言模型（LLM，如 GPT、Claude）在攻防中的实际能力。AI 可以做：OSINT（开源情报）侦察、扫描代码发现漏洞、规划攻击路径、生成 Exploit（利用漏洞的代码）、写渗透报告。结论：能帮忙但还不能完全替代人类。练习：试用 ChatGPT/Claude 辅助分析 CTF 题目，但要搞懂每一步原理；去 HackTheBox AI Range 体验。</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">AI 辅助恶意软件开发 — 攻击门槛大幅降低 <span style="font-size:0.75em">⭐⭐ 基础</span></div>
+      <div class="entry-meta">
+        <span class="tag medium">MEDIUM</span>
+        <span class="tag">AI安全</span>
+        <span class="tag">恶意软件</span>
+        <span class="tag">模块化</span>
+      </div>
+      <div class="entry-desc">安全研究员发现 Avalon 恶意软件有 AI 辅助开发痕迹，几天就能搞定以前几个月的工作量。攻击者用 ChatGPT/Claude 生成恶意软件的各个模块（模块化恶意软件 = 像搭积木，每个模块负责不同功能），快速组装凭证窃取、远程控制、勒索加密等功能。AI 生成的代码缺乏高级黑客的 Tradecraft（操作技巧和经验），但功能齐全。练习：TryHackMe Malware Introductory 房间。</div>
+    </div>
+  </div>
   <div class="day-card">
     <div class="day-header">
       <div class="day-date">📅 2026年7月3日 周五</div>
@@ -1554,9 +1620,9 @@ footer a{color:#98c379}
 
 <script>
 // Stats will be updated by the cron job
-document.getElementById('totalDays').textContent = '19';
-document.getElementById('totalEntries').textContent = '144';
-document.getElementById('lastUpdate').textContent = '2026-07-03';
+document.getElementById('totalDays').textContent = '20';
+document.getElementById('totalEntries').textContent = '150';
+document.getElementById('lastUpdate').textContent = '2026-07-04';
 </script>
 </body>
 </html>
